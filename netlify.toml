@@ -1,4 +1,10 @@
-[build]
-  command = "mkdir -p dist && if [ -f index.php ]; then php index.php > dist/index.html; fi"
-  publish = "dist"
 
+[build]
+  publish = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
