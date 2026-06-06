@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: phpdemoswift
+    env: php
+    startCommand: heroku-php-apache2
